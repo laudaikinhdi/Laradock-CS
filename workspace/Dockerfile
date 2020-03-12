@@ -32,6 +32,17 @@ RUN if [ ${CHANGE_SOURCE} = true ]; then \
     sed -i 's/security-cdn.debian.org/mirrors.tuna.tsinghua.edu.cn/' /etc/apt/sources.list \
 ;fi
 
+###########################################################################
+# GraphViz extension
+###########################################################################
+
+ARG INSTALL_GRAPHVIZ=false
+
+RUN if [ ${INSTALL_GRAPHVIZ} = true ]; then \
+    apt-get update && \
+    apt-get install -y graphviz \
+;fi
+
 # Start as root
 USER root
 
