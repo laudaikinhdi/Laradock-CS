@@ -37,7 +37,6 @@ RUN if [ ${CHANGE_SOURCE} = true ]; then \
 ###########################################################################
 
 ARG INSTALL_GRAPHVIZ=false
-
 RUN if [ ${INSTALL_GRAPHVIZ} = true ]; then \
     apt-get update && \
     apt-get install -y graphviz \

@@ -39,7 +39,7 @@ COMPOSE_PROJECT_NAME=laradock
 
 # Select a PHP version of the Workspace and PHP-FPM containers (Does not apply to HHVM).
 # Accepted values: 7.4 - 7.3 - 7.2 - 7.1 - 7.0 - 5.6
-PHP_VERSION=7.3
+PHP_VERSION=7.4
 
 ### Phalcon Version ###########################################
 
@@ -167,6 +167,7 @@ WORKSPACE_INSTALL_GIT_PROMPT=false
 
 ### PHP_FPM ###############################################
 
+PHP_FPM_INSTALL_GIT=true
 PHP_FPM_INSTALL_BCMATH=true
 PHP_FPM_INSTALL_MYSQLI=true
 PHP_FPM_INSTALL_INTL=true

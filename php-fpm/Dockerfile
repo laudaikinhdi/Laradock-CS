@@ -32,6 +32,12 @@ RUN if [ ${CHANGE_SOURCE} = true ]; then \
     sed -i 's/security-cdn.debian.org/mirrors.tuna.tsinghua.edu.cn/' /etc/apt/sources.list \
 ;fi
 
+ARG INSTALL_GIT=false
+RUN if [ ${INSTALL_GIT} = true ]; then \
+    apt update && \
+    apt install -y git \
+;fi
+
 # always run apt update when start and after add new source list, then clean up at end.
 RUN set -xe; \
     apt-get update -yqq && \
